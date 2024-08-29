@@ -4,8 +4,9 @@ import HomePage from "../page/website/home/HomePage";
 import LayoutAdmin from "../layouts/LayoutAdmin";
 import Notfound from "../page/website/404/Notfound";
 import pageAdmin from "../page/admin/page";
-import Add from "../page/admin/add";
-import Edit from "../page/admin/edit";
+import Add from "../page/admin/Add";
+import Edit from "../page/admin/Edit";
+
 
 
 function Router  ()  {

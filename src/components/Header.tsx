@@ -105,47 +105,7 @@ const Header = () => {
     },
   ];
 
-  const items: MenuProps["items"] = [
-    {
-      key: "1",
-      label: (
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <span className="text-sm text-yellow-600 ">
-            Thiết kế nội thất chung cư cho đôi vợ chồng trẻ
-          </span>
-          <br />
-          <span className="text-blue-500">xem chi tiết</span>
-          <hr />
-        </a>
-      ),
-    },
-    {
-      key: "2",
-      label: (
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <span className="text-sm text-yellow-600">
-            Những điều cần biết để lựa chọn bộ bàn ăn phù hợp với ngôi nhà bạn
-          </span>
-          <br />
-          <span className="text-blue-500">xem chi tiết</span>
-          <hr />
-        </a>
-      ),
-    },
-    {
-      key: "3",
-      label: (
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <span className="text-sm text-yellow-600">
-            Mua sofa giường mang cả thiên đường đến những căn hộ nhỏ
-          </span>
-          <br />
-          <span className="text-blue-500">xem chi tiết</span>
-          <hr />
-        </a>
-      ),
-    },
-  ];
+  
   const users: MenuProps["items"] = [
     {
       label: <a href="#">Tên người dùng</a>,
@@ -176,29 +136,9 @@ const Header = () => {
     console.log(info?.source, value);
   return (
     <div>
-      {/* thông báo */}
-      <div className="hidden md:block font-sans">
-        <div className="bg-blue-500 text-foreground flex p-1 flex-col md:flex-row  justify-between items-center text-white">
-          <div className="flex flex-row mb-4 md:mb-0">
-            <span className="text-sm ml-2 ">Hotline: 1900.636.000 </span>
-            <span className="text-sm ml-2 "> | Liên hệ </span>
-          </div>
-          <NavLink to={"#"} className="flex items-center mr-2">
-            <span className="mx-4 hidden md:block">|</span>
-            <Dropdown menu={{ items }} placement="bottomRight" arrow>
-              <span className="bg-accent text-accent-foreground rounded-lg hidden md:inline-block">
-                <Badge className="text-xs">
-                  <span className="text-sm text-white ">Thông báo của tôi </span>
-                </Badge>
-              </span>
-            </Dropdown>
-          </NavLink>
-        </div>
-      </div>
-      {/* thông báo */}
+     
       {/* header */}
-      
-      <nav className="flex items-center justify-between p-5 bg-background sticky top-0  z-50 bg-white shadow-md ">
+      <nav className="flex items-center justify-between p-5 bg-background fixed w-full top-0 z-50 bg-white shadow-md md:static md:bg-transparent">
         <div className="text-2xl font-bold text-foreground">
           <div className="text-2xl font-bold text-foreground  ">Mode Fashion</div>
         </div>
