@@ -138,7 +138,7 @@ const Header = () => {
     <div>
      
       {/* header */}
-      <nav className="flex items-center justify-between p-5 bg-background fixed w-full top-0 z-50 bg-white shadow-md md:static md:bg-transparent">
+      <nav className="flex items-center justify-between p-5 bg-background fixed w-full top-0 z-50 bg-white shadow-md  md:bg-white">
         <div className="text-2xl font-bold text-foreground">
           <div className="text-2xl font-bold text-foreground  ">Mode Fashion</div>
         </div>
