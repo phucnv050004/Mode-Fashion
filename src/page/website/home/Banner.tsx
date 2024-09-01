@@ -14,7 +14,7 @@ const Banner = () => {
   }
 
   return (
-    <div className='w-full mx-auto top-12  relative pt-16 md:pt-0'>
+    <div className='w-full mx-auto top-2.5  relative pt-16 md:pt-0'>
       <Carousel ref={carouselRef} effect='fade' autoplay className='overflow-hidden shadow-lg'>
         <img
           src='https://theme.hstatic.net/200000592359/1001192084/14/slide_3_img.jpg?v=55,1'
