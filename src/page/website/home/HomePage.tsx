@@ -91,18 +91,18 @@ const HomePage = () => {
   return (
     <div>
       {/* Danh mục nổi bật */}
-      <div className="container mx-auto py-8">
-      <h2 className="text-xl font-bold text-left mb-6 ml-3">Danh mục nổi bật</h2>
+      <div className="container mx-auto py-4 px-8">
+      <h2 className="text-lg font-bold text-left mt-12 mb-6  ">Danh mục nổi bật</h2>
       <Row gutter={[16, 16]}>
         {categories.map((category, index) => (
           <Col key={index} xs={24} sm={12} md={6}>
             <Card
               hoverable
-              cover={<img alt={category.title} src={category.image} className="w-full h-auto object-cover" />}
-              className="rounded-lg shadow-lg overflow-hidden bg-card"
+              cover={<img alt={category.title} src={category.image} className="w-full h-auto object-cover " />}
+              className="rounded-lg shadow-lg overflow-hidden  bg-card"
             >
               <Card.Meta
-                title={<h3 className="text-lg font-semibold">{category.title}</h3>}
+                title={<h3 className="text-sm font-semibold">{category.title}</h3>}
                 description={<a href="#" className="text-primary hover:underline"><ArrowRightOutlined /></a>}
               />
             </Card>
@@ -112,17 +112,17 @@ const HomePage = () => {
     </div>
    {/* bài viết  */}
    <div>
-      <div className="hidden md:block relative">
+      <div className="hidden md:block relative mt-4">
         <Button
           onClick={scrollLeft}
           className="absolute left-20 top-1/2 transform -translate-y-1/2 z-10 rounded-full p-2"
         >
           <LeftOutlined />
         </Button>
-        <h1 className="text-center text-3xl mt-6 mx-auto ">Tin tức nổi bật</h1>
+        <h1 className="text-lg font-bold text-center px-6 mb-6 mt-6">Tin tức nổi bật</h1>
         <div
           ref={scrollContainerRef}
-          className="overflow-hidden scrollbar-hide   p-4 whitespace-nowrap px-6"
+          className="overflow-hidden scrollbar-hide  whitespace-nowrap "
         >
           {newsItems.map((article, index) => (
             <Card
@@ -130,7 +130,7 @@ const HomePage = () => {
               hoverable
               style={{ width: 465, display: 'inline-block' }}
               cover={<img alt={article.title} src={article.image} className="rounded-t-lg" />}
-              className="m-10 rounded-lg shadow-lg overflow-hidden relative bg-white"
+              className="m-5 rounded-lg shadow-lg overflow-hidden relative bg-white"
             >
               <div className="absolute top-0 left-0 bg-white text-gray-500 px-2 py-1 rounded-br-lg">
                 {article.date}
@@ -153,6 +153,7 @@ const HomePage = () => {
         </Button>
       </div>
       <div className="block md:hidden">
+        <h1 className="text-xl font-bold text-center py-2  ">Tin tức nổi bật</h1>
         <Carousel
           slidesToShow={2}
           dots
@@ -179,7 +180,7 @@ const HomePage = () => {
               <Card
                 hoverable
                 cover={<img alt={newsItem.title} src={newsItem.image} className="rounded-t-lg" />}
-                className="rounded-lg shadow-lg overflow-hidden relative"
+                className="rounded-lg shadow-lg overflow-hidden mb-4 relative"
               >
                 <div className="absolute top-0 left-0 bg-white text-orange-500 px-2 py-1 rounded-br-lg">
                   {newsItem.date}

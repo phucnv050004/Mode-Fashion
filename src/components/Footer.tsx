@@ -1,136 +1,294 @@
+
 import {
+  EnvironmentOutlined,
   FacebookFilled,
   GooglePlusOutlined,
   InstagramOutlined,
+  MailOutlined,
+  PhoneOutlined,
+  PlusOutlined,
   TwitterOutlined,
-  YoutubeOutlined,
-} from "@ant-design/icons";
+  YoutubeOutlined
+} from '@ant-design/icons';
+import { Button, Col, Input, Row } from 'antd';
+import { useState } from 'react';
 
 const Footer = () => {
+  const [activeSection, setActiveSection] = useState<string | undefined>(undefined);
+
+  const toggleSection = (section: string) => {
+    setActiveSection(activeSection === section ? undefined : section);
+  };
   return (
-    <div>
-      <div className="bg-gray-500 p-4 md:p-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8">
-          {/* Đăng ký nhận tin */}
-          <div className="order-1 md:order-4">
-            <h2 className="text-lg font-bold text-center md:text-left">
-              Đăng ký nhận tin
-            </h2>
-            <p className="text-muted-foreground">
-              Để cập nhật những sản phẩm mới, nhận thông tin ưu đãi đặc biệt và
-              thông tin giảm giá khác.
-            </p>
-            <div className="flex mt-4">
-              <input
-                type="email"
-                placeholder="Nhập email của bạn"
-                className="border border-border rounded-l-md p-2 flex-grow"
-              />
-              <button className="bg-black text-secondary-foreground rounded-r-md p-2 hover:bg-secondary/80">
-                <span className="text-white">ĐĂNG KÝ</span>
-              </button>
-            </div>
+    <div className='bg-gray-400 text-white py-2'>
+    <div className='bg-gray-400 py-1 p-2'>
+      <div className='container mx-auto flex flex-col md:flex-row justify-between    items-center space-y-2 md:space-y-0'>
+        {/* Đăng ký nhận tin */}
+        <div className='flex flex-col md:flex-row items-center space-x-0 md:space-x-4 p-2  space-y-2 md:space-y-0'>
+          <span className='text-lg font-semibold text-white'>Đăng ký nhận tin</span>
+          <div className="flex items-center bg-card p-2 rounded-lg shadow-md">
+            <Input
+              className='w-full md:w-auto  m-0.5 '
+              size='large'
+              placeholder='Nhập email của bạn'
+              prefix={<MailOutlined />}
+            />
+            <Button
+              type='primary'
+              className='bg-yellow-500 hover:bg-yellow-600 text-white font-bold  px-6 py-5 w-sm  md:w-auto'
+            >
+              Đăng ký
+            </Button>
           </div>
 
-          {/* Về Mode Fashion */}
-          <div className="order-2">
-            <h2 className="text-lg font-bold text-center md:text-left">
-              Về Mode Fashion
-            </h2>
-            <p className="text-muted-foreground">
-              Với các giải pháp công nghệ tốt nhất, Haravan là tất cả những gì
-              bạn cần để xây dựng thương hiệu online, thành công trong bán lẻ và
-              marketing đột phá.
-            </p>
-            <div className="flex justify-center md:justify-start space-x-4 mt-4">
-              <a
-                href="#"
-                className="text-white text-2xl border border-white p-2 rounded-full flex items-center justify-center"
-              >
-                <FacebookFilled />
-              </a>
-              <a
-                href="#"
-                className="text-white text-2xl border border-white p-2 rounded-full flex items-center justify-center"
-              >
-                <TwitterOutlined />
-              </a>
-              <a
-                href="#"
-                className="text-white text-2xl border border-white p-2 rounded-full flex items-center justify-center"
-              >
-                <InstagramOutlined />
-              </a>
-              <a
-                href="#"
-                className="text-white text-2xl border border-white p-2 rounded-full flex items-center justify-center"
-              >
-                <GooglePlusOutlined />
-              </a>
-              <a
-                href="#"
-                className="text-white text-2xl border border-white p-2 rounded-full flex items-center justify-center"
-              >
-                <YoutubeOutlined />
-              </a>
-            </div>
+        </div>
+
+        {/* Kết nối với chúng tôi (chỉ hiển thị trên màn hình từ md trở lên) */}
+        <div className='hidden md:flex flex-col md:flex-row items-center space-x-0 md:space-x-4 space-y-2 md:space-y-0'>
+          <span className='text-white text-lg'>Kết nối với chúng tôi</span>
+          <div className='flex space-x-3'>
+            <a
+              href='#'
+              className='text-white text-2xl border border-white p-2 rounded-full flex items-center justify-center'
+            >
+              <FacebookFilled />
+            </a>
+            <a
+              href='#'
+              className='text-white text-2xl border border-white p-2 rounded-full flex items-center justify-center'
+            >
+              <TwitterOutlined />
+            </a>
+            <a
+              href='#'
+              className='text-white text-2xl border border-white p-2 rounded-full flex items-center justify-center'
+            >
+              <InstagramOutlined />
+            </a>
+            <a
+              href='#'
+              className='text-white text-2xl border border-white p-2 rounded-full flex items-center justify-center'
+            >
+              <GooglePlusOutlined />
+            </a>
+            <a
+              href='#'
+              className='text-white text-2xl border border-white p-2 rounded-full flex items-center justify-center'
+            >
+              <YoutubeOutlined />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr className='my-4 border-t border-gray-600 ' />
+    <div className='container mx-auto p-4 '>
+      <Row gutter={[32, 32]}>
+        <Col xs={24} md={6}>
+          <div className='md:hidden'>
+            <h4
+              className='text-lg font-semibold  cursor-pointer'
+              onClick={() => toggleSection('about')}
+            >
+              Về Mode Fashion <PlusOutlined className='float-right mt-2.5 text-xs' />
+            </h4>
+
+            {activeSection === 'about' && (
+              <div>
+                <p className='text-sm'>
+                  Với các giải pháp công nghệ tốt nhất, Haravan là tất cả những gì bạn cần để xây dựng thương hiệu online, thành công trong bán lẻ và marketing đột phá.
+                </p>
+                <p className='mt-4 text-sm'>
+                  <EnvironmentOutlined style={{ fontSize: '16px', marginRight: '8px' }} />
+                  Tầng 4, tòa nhà Flemington, số 182, đường Lê Đại Hành, phường 15, quận 11, Tp. Hồ Chí Minh.
+                </p>
+                <p className='mt-2 text-sm'>
+                  <PhoneOutlined style={{ fontSize: '16px', marginRight: '8px' }} />
+                  1900.000.XXX
+                </p>
+                <p className='text-sm'>
+                  <MailOutlined style={{ fontSize: '16px', marginRight: '8px' }} />
+                  hi@home-haven.abc
+                </p>
+              </div>
+            )}
+            <br />
+            <hr className=' border-t border-gray-600' />
           </div>
 
-          {/* Thông tin liên hệ */}
-          <div className="order-3">
-            <h2 className="text-lg font-bold text-center md:text-left">
-              Thông tin liên hệ
-            </h2>
-            <p className="text-muted-foreground">
-              Địa chỉ: Tầng 4, tòa nhà Flemington, số 182, đường Lê Đại Hành,
-              phường 15, quận 11, Tp. Hồ Chí Minh.
+          {/* Nội dung hiển thị trên màn hình lớn */}
+          <div className='hidden md:block'>
+            <h4 className='text-lg font-semibold mb-4'>Về Mode Fashion
+
+            </h4>
+            <p className='text-sm'>
+              Với các giải pháp công nghệ tốt nhất, Haravan là tất cả những gì bạn cần để xây dựng thương hiệu online, thành công trong bán lẻ và marketing đột phá.
             </p>
-            <p className="text-muted-foreground">Điện thoại: 1900.636.000</p>
-            <p className="text-muted-foreground">Fax: 1900.636.000</p>
-            <p className="text-muted-foreground">
-              Email:{" "}
-              <a href="mailto:hi@modefashion.com" className="text-primary">
-                hi@modefashion.com
-              </a>
+            <p className='mt-4 text-sm'>
+              <EnvironmentOutlined style={{ fontSize: '16px', marginRight: '8px' }} />
+              Tầng 4, tòa nhà Flemington, số 182, đường Lê Đại Hành, phường 15, quận 11, Tp. Hồ Chí Minh.
             </p>
-            <h3 className="mt-6 font-bold">Phương thức vận chuyển</h3>
-            <div className="flex justify-center md:justify-start space-x-4 mt-4">
-              <img
-                src="https://theme.hstatic.net/200000748041/1001116292/14/shipment_1_img.png?v=31"
-                alt="GHN Express"
-                className="h-8"
-              />
-              <img
-                src="https://theme.hstatic.net/200000748041/1001116292/14/shipment_3_img.png?v=31"
-                alt="Ahamove"
-                className="h-8"
-              />
-              <img
-                src="https://theme.hstatic.net/200000748041/1001116292/14/shipment_4_img.png?v=31"
-                alt="J&T Express"
-                className="h-8"
-              />
-            </div>
+            <p className='mt-2 text-sm'>
+              <PhoneOutlined style={{ fontSize: '16px', marginRight: '8px' }} />
+              1900.000.XXX
+            </p>
+            <p className='text-sm'>
+              <MailOutlined style={{ fontSize: '16px', marginRight: '8px' }} />
+              hi@home-haven.abc
+            </p>
+          </div>
+        </Col>
+
+        <Col xs={24} md={6}>
+          <div className='md:hidden -mt-3'>
+            <h4
+              className='text-lg font-semibold  cursor-pointer'
+              onClick={() => toggleSection('support')}
+            >
+              Hỗ trợ khách hàng <PlusOutlined className='float-right mt-2.5 text-xs' />
+            </h4>
+            {activeSection === 'support' && (
+              <><ul className='space-y-2' style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+                <li>Sản phẩm khuyến mãi</li>
+                <li>Sản phẩm nổi bật</li>
+                <li>Tất cả sản phẩm</li>
+              </ul>
+                <>
+                  <h4 className='text-lg font-semibold mt-6'>Phương thức vận chuyển</h4>
+                  <div className='flex space-x-4 mt-4'>
+                    <img
+                      src='https://theme.hstatic.net/200000748041/1001116292/14/shipment_1_img.png?v=31'
+                      alt='GHN Express'
+                      className='h-8' />
+                    <img
+                      src='https://theme.hstatic.net/200000748041/1001116292/14/shipment_3_img.png?v=31'
+                      alt='Ahamove'
+                      className='h-8' />
+                    <img
+                      src='https://theme.hstatic.net/200000748041/1001116292/14/shipment_4_img.png?v=31'
+                      alt='J&T Express'
+                      className='h-8' />
+                  </div>
+                </></>
+
+
+            )}
+            <hr className='my-4 border-t border-gray-600 ' />
           </div>
 
-          {/* Nhóm liên kết */}
-          <div className="order-4 md:order-1">
-            <h2 className="text-lg font-bold text-center md:text-left">
-              Nhóm liên kết
-            </h2>
-            <ul className="list-disc list-inside text-muted-foreground">
+          <div className='hidden md:block'>
+            <h4 className='text-lg font-semibold mb-4'>Hỗ trợ khách hàng</h4>
+            <ul className='space-y-2' style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+              <li>Sản phẩm khuyến mãi</li>
+              <li>Sản phẩm nổi bật</li>
+              <li>Tất cả sản phẩm</li>
+            </ul>
+            {/* Phương thức  vận chuyển */}
+            <h4 className='text-lg font-semibold mt-6'>Phương thức vận chuyển</h4>
+            <div className='flex space-x-4 mt-4'>
+              <img
+                src='https://theme.hstatic.net/200000748041/1001116292/14/shipment_1_img.png?v=31'
+                alt='GHN Express'
+                className='h-8'
+              />
+              <img
+                src='https://theme.hstatic.net/200000748041/1001116292/14/shipment_3_img.png?v=31'
+                alt='Ahamove'
+                className='h-8'
+              />
+              <img
+                src='https://theme.hstatic.net/200000748041/1001116292/14/shipment_4_img.png?v=31'
+                alt='J&T Express'
+                className='h-8'
+              />
+            </div>
+
+          </div>
+        </Col>
+
+        <Col xs={24} md={6}>
+          <div className='md:hidden -mt-9'>
+            <h4
+              className='text-lg font-semibold py-2  cursor-pointer'
+              onClick={() => toggleSection('lienket')}
+            >
+              Liên Kết <PlusOutlined className='float-right mt-2.5 text-xs' />
+            </h4>
+            {activeSection === 'lienket' && (
+              <ul className='space-y-2' style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+                <li> Trang chủ</li>
+                <li> Sản phẩm</li>
+                <li>Trang sản phẩm</li>
+                <li>Giới thiệu</li>
+                <li>Cẩm nang trang trí</li>
+                <li>Hệ thống cửa hàng</li>
+                <li>FAQs</li>
+                <li>Landing page</li>
+              </ul>
+            )}
+            <hr className='my-2 border-t border-gray-600 ' />
+          </div>
+
+          {/* Nội dung hiển thị trên màn hình lớn */}
+          <div className='hidden md:block'>
+            <h4 className='text-lg font-semibold mb-4'>Liên Kết </h4>
+            <ul className='space-y-2' style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+              <li> Trang chủ</li>
+              <li> Sản phẩm</li>
+              <li>Trang sản phẩm</li>
+              <li>Giới thiệu</li>
+              <li>Cẩm nang trang trí</li>
+              <li>Hệ thống cửa hàng</li>
+              <li>FAQs</li>
+              <li>Landing page</li>
+            </ul>
+          </div>
+        </Col>
+
+        <Col xs={24} md={6}>
+          <div className='md:hidden -mt-5'>
+            <h4
+              className='text-lg font-semibold  cursor-pointer'
+              onClick={() => toggleSection('chinhsach')}
+            >
+              Chính sách <PlusOutlined className='float-right mt-2.5 text-xs' />
+            </h4>
+            {activeSection === 'chinhsach' && (
+              <ul className='space-y-2' style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+                <li>Tìm kiếm</li>
+                <li>Giới thiệu</li>
+                <li>Chính sách đổi trả</li>
+                <li>Chính sách bảo mật</li>
+                <li>Điều khoản dịch vụ</li>
+                <li>Liên hệ</li>
+              </ul>
+            )}
+          </div>
+
+          {/* Nội dung hiển thị trên màn hình lớn */}
+          <div className='hidden md:block'>
+            <h4 className='text-lg font-semibold mb-4'>Chính sách </h4>
+            <ul className='space-y-2' style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
               <li>Tìm kiếm</li>
               <li>Giới thiệu</li>
               <li>Chính sách đổi trả</li>
               <li>Chính sách bảo mật</li>
               <li>Điều khoản dịch vụ</li>
-              <li>Hệ thống cửa hàng</li>
               <li>Liên hệ</li>
             </ul>
           </div>
-        </div>
-      </div>
+        </Col>
+      </Row>
+
+      <hr className='my-4 border-t border-gray-600' />
+
+      <Row justify='center' className='mt-7'>
+        <Col>
+          <p className='text-xs text-center'>Copyright © 2024 phucnv</p>
+        </Col>
+      </Row>
     </div>
+  </div>
   );
 };
 
