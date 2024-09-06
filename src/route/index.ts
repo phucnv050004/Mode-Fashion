@@ -1,6 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import LayoutClient from "../layouts/LayoutClient";
-import HomePage from "../page/website/home/HomePage";
+import HomePage from "../page/website/HomePage";
 import LayoutAdmin from "../layouts/LayoutAdmin";
 import Notfound from "../page/website/404/Notfound";
 import pageAdmin from "../page/admin/page";

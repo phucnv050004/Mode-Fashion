@@ -6,6 +6,7 @@ import Banner from "../page/website/home/Banner"
 const LayoutClient = () => {
   return (
     <div>
+      
       <Header/>
       <Banner/>
       <main>

@@ -1,0 +1,198 @@
+{
+    "products":[
+     {
+        "id":1,
+        "name":"Áo có slogan",
+        "image1":"https://product.hstatic.net/200000592359/product/nu-6_e6d4657516ee487aa83a448d64671de5_b6f3b18dbc6b428688ad1ff9df92ed41_79fe54d771d94a898efc8b25bcac96cb_master.jpg",
+        "image2":"https://product.hstatic.net/200000592359/product/-6-1_015a3e3df35b42ecb268c0492ba697ad_7c43907ffa0a45d1a8699734bfcb6620_6c12bbeb29c54e0e9773f4ae597b2055_master.jpg",
+        "price": 890.000,
+        "description":""
+     },
+     {
+        "id":2,
+        "name":"Áo len cổ tròn kiểu Cổ điển",
+        "image1":"https://product.hstatic.net/200000592359/product/-2-5_e111d02c6da5438b8c18fa081b77b817_6b84d30304e8484c94855b868e120038_89824349463f422590cd37d49e4c7756_master.jpg",
+        "image2":"https://product.hstatic.net/200000592359/product/-2-6_a217785366d4447aa6bfc594d11a7905_261b15eb4a2442f980620cc70989d9c9_5c062b2d5e2244f890ff08de4e55505d_master.jpg",
+        "price": 890.000,
+        "description":""
+     },
+     {
+        "id":3,
+        "name":"Áo phông đồ họa Jersey",
+        "image1":"https://product.hstatic.net/200000592359/product/-5-9_f69ee5ff25104175859df5c01b1075b0_8c3452c0c4804cc486f00e1044ce1e86_25d7a31fb7ec49579557eea482a97b3c_master.jpg",
+        "image2":"https://product.hstatic.net/200000592359/product/5-11_be4bad94c08f4a508b99cbb02e3803b0_e78b05de7b35419b9d1fd9b734563b71_340858d2e6334b8988b8d0d8358f6353_master.jpg",
+        "price": 890.000,
+        "description":""
+     },
+     {
+        "id":4,
+        "name":"Áo Thun Nam Y2010 Basic Z02",
+        "image1":"https://product.hstatic.net/200000592359/product/am-2_bdbfaa6332744939a95ae473eec398ba_05b1d97767f94ff894c7aaa879a45be9_690529155fe845ad862222b8178dda68_master.jpg",
+        "image2":"https://product.hstatic.net/200000592359/product/-2-2_52d155e2fccb40188b82921d65fbd090_a2c1406d8bba4f43a30bd566199acea1_3ca2077f6d7540c6be57063d2741bbcc_master.jpg",
+        "price": 890.000,
+        "description":""
+     },
+     {
+        "id":5,
+        "name":"Áo sơ mi nữ vải Chiffon",
+        "image1":"https://product.hstatic.net/200000592359/product/5-13_fd0163fcc7a4454099d700927584d4f6_dfa592098d8448e79d2122b5ecbc3c56_9bda3d29e4f64395a9ff38ccf9e4cf55_master.jpg",
+        "image2":"https://product.hstatic.net/200000592359/product/5-15_8b7c9fb33de8476bbabe080efb2b5b7b_1377d005166440c5b592781484eb75d9_271b9533deb642c0a598a11a1c3ec1cc_master.jpg",
+        "price": 890.000,
+        "description":""
+     },
+     {
+        "id":6,
+        "name":"Áo Sơ mi Caro tay ngắn",
+        "image1":"https://product.hstatic.net/200000592359/product/ben-sherman-ss-gingham-shirt-1_9a9aeecc4bc74ec7af907e15f332d9e1_master.jpg",
+        "image2":"https://product.hstatic.net/200000592359/product/ben-sherman-ss-gingham-shirt-5_aa5e4f0d0b5245ffae5e290035d81c14_master.jpg",
+        "price": 890.000,
+        "description":""
+     },
+     {
+        "id":7,
+        "name":"Áo len cổ điển",
+        "image1":"https://product.hstatic.net/200000592359/product/5559325807_2_1_1_8660205298d2417890e21c916af64125_2a5d97869a744f2591c84f69de5eaee9_master.jpeg",
+        "image2":"https://product.hstatic.net/200000592359/product/5559325807_2_3_1_6c7303c67ccf46128ab7b4a074d168ff_0b00087fe6f54e0b94ec4bcb87563751_master.jpeg",
+        "price": 890.000,
+        "description":""
+     },
+     {
+        "id":8,
+        "name":"Elessi Knit",
+        "image1":"https://product.hstatic.net/200000592359/product/5559315400_2_1_1_5788900aa97141aca0faf61e83002a70_853d938818ff4cb79042eef6cabba17e_master.jpeg",
+        "image2":"https://product.hstatic.net/200000592359/product/5559315400_2_4_1_ff56e7cffeab4f1ca5787e6147c12575_95b90642848c4075b42d866d1c1d009f_master.jpeg",
+        "price": 890.000,
+        "description":""
+     },
+     {
+        "id":9,
+        "name":"Mũ bóng chày chống nắng kiểu Hàn Quốc",
+        "image1":"https://product.hstatic.net/200000592359/product/12-9_0a3db44e803c4ac4a3726bae953070a2_9960b7812e4f47b6b599583bfc3416d7_d2879beefccc4e429b8669b55e5febb5_master.jpg",
+        "image2":"https://product.hstatic.net/200000592359/product/2-10_4a57fa69d1a14f71bbb83b8c1c1ac653_5b880b0c67bd4528a679d69e6ebd0447_1385a6e27a8c449c8764b3ba540a1d4e_master.jpg",
+        "price": 890.000,
+        "description":""
+     },
+     {
+        "id":4,
+        "name":"Áo khoác cho nam",
+        "image1":"https://product.hstatic.net/200000592359/product/2141498300_1_1_1_1da0f014e355489796151255eb7fb6cf_d0790862aaea4e76807555ff01911b89_master.jpeg",
+        "image2":"https://product.hstatic.net/200000592359/product/2141498300_2_1_1_1aa2267b5c3942f08587a2dcc49a687c_4edd816eeca14cfba275d855bc48140e_master.jpeg",
+        "price": 890.000,
+        "description":""
+     }
+
+
+    ],
+    "outstanding":[
+        {
+            "id":1,
+            "name":" Áo len cổ tròn kiểu Cổ điển",
+            "image":"https://theme.hstatic.net/200000592359/1001192084/14/home_set_combo_1_img.jpg?v=55",
+            "price": 890.000,
+            "description":""
+        },
+        {
+            "id":2,
+            "name":" Áo len cổ tròn kiểu Cổ điển",
+            "image":"https://theme.hstatic.net/200000592359/1001192084/14/home_set_combo_3_img.jpg?v=55",
+            "price": 890.000,
+            "description":""
+        },
+        {
+            "id":3,
+            "name":" Áo len cổ tròn kiểu Cổ điển",
+            "image":"https://theme.hstatic.net/200000592359/1001192084/14/home_set_combo_2_img.jpg?v=55",
+            "price": 890.000,
+            "description":""
+        },
+        {
+            "id":4,
+            "name":" Áo len cổ tròn kiểu Cổ điển",
+            "image":"https://theme.hstatic.net/200000592359/1001192084/14/home_set_combo_1_img.jpg?v=55",
+            "price": 890.000,
+            "description":""
+        }
+    ],
+    "news":[
+        {
+            "id":1,
+            "title": "Mẫu chân váy dạ mùa đông xinh xắn cho những ngày đông",
+            "description":
+              "Đây là trang blog của cửa hàng. Bạn có thể dùng blog để quảng bá sản phẩm mới, chia sẻ trải nghiệm của khách hàng, các mẹo mua hàng hoặc bất kì điều gì bạn muốn chia sẻ.",
+            "date": "13 Tháng 07, 2023",
+            "image":
+              "https://file.hstatic.net/200000592359/article/blog01_aa6af9e80dc243019d1bc995be370853_large.jpg",
+            "link": "/link-1"
+          },
+          {
+            "id":2,
+            "title": "Cách phối đồ với quần jogger nữ đơn giản nhưng cực kỳ cá tính",
+            "description":
+              "Đây là trang blog của cửa hàng. Bạn có thể dùng blog để quảng bá sản phẩm mới, chia sẻ trải nghiệm của khách hàng, các mẹo mua hàng hoặc bất kì điều gì bạn muốn chia sẻ.",
+            "date": "13 Tháng 07, 2023",
+            "image":
+              "https://file.hstatic.net/200000592359/article/blog02_ad9040892087469290bb2caf37862b98_large.jpg",
+            "link": "/link-2"
+          },
+          {
+            "id":3,
+            "title": "Tips phối đồ với boots nam thêm lịch lãm, fashion",
+            "description":
+              "Boot đã có nhưng kết hợp với áo gì cũng khiến các anh chàng có gu thêm phần băn khoăn. Kiểu áo cũng là một yếu tố giúp set đồ của bạn thêm phần hoàn hảo. Một số gợi ý dưới đây sẽ giúp chàng thêm phần đẹp và trẻ trung hơn.",
+            "date": "13 Tháng 07, 2023",
+            "image":
+              "https://file.hstatic.net/200000592359/article/blog03_a6f29cf3485048cf9c505228277b6990_large.jpg",
+            "link": "/link-3"
+          },
+          {
+            "id":4,
+            "title": "Cách phối đồ nam mùa đông cực thời trang và trendy",
+            "description":
+              "Thời nay, biết cách ăn mặc là điều vô cùng quan trọng đối với bất cứ ai, dù là nam hay nữ. Nó sẽ giúp bạn ghi điểm trong mắt mọi người xung quanh. Do đó, dưới đây YODY sẽ chia sẻ với anh em những bí kíp phối đồ mùa đông nam cực chuẩn và hợp mốt.",
+            "date": "13 Tháng 07, 2023",
+            "image":
+              "https://file.hstatic.net/200000592359/article/blog04_6d7325827ad345c3afb2c68f34677da3_large.jpg",
+            "link": "/link-2"
+          },
+          {
+            "id":5,
+            "title": "Cách phối đồ nam mùa đông cực thời trang và trendy",
+            "description":
+              "Thời nay, biết cách ăn mặc là điều vô cùng quan trọng đối với bất cứ ai, dù là nam hay nữ. Nó sẽ giúp bạn ghi điểm trong mắt mọi người xung quanh. Do đó, dưới đây YODY sẽ chia sẻ với anh em những bí kíp phối đồ mùa đông nam cực chuẩn và hợp mốt.",
+            "date": "13 Tháng 07, 2023",
+            "image":
+              "https://file.hstatic.net/200000592359/article/blog04_6d7325827ad345c3afb2c68f34677da3_large.jpg",
+            "link": "/link-2"
+          }
+    ],
+    "categories":[
+        {
+            "id":1,
+            "title": "Thời trang nam",
+            "image":
+              "https://theme.hstatic.net/200000592359/1001192084/14/home_category_1_img.jpg?v=55"
+          },
+          {
+            "id":2,
+            "title": "Thời trang nữ",
+            "image":
+              "https://theme.hstatic.net/200000592359/1001192084/14/home_category_2_img.jpg?v=55"
+          },
+          {
+            "id":3,
+            "title": "Thời trang mùa đông",
+            "image":
+              "https://theme.hstatic.net/200000592359/1001192084/14/home_category_3_img.jpg?v=55"
+          },
+          {
+            "id":4,
+            "title": "Thời trang nổi bật 2022",
+            "image":
+              "https://theme.hstatic.net/200000592359/1001192084/14/home_category_4_img.jpg?v=55"
+          }
+    ],
+    "users":[
+
+    ]
+
+}

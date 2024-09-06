@@ -25,7 +25,7 @@ import {
   theme,
 } from "antd";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const { useToken } = theme;
@@ -134,11 +134,52 @@ const Header = () => {
   const { Search } = Input;
   const onSearch: SearchProps["onSearch"] = (value, _e, info) =>
     console.log(info?.source, value);
+  const [showPromo, setShowPromo] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlPromoVisibility = () => {
+    if (window.scrollY > lastScrollY && window.scrollY > 50) {
+      // Khi cuộn xuống và độ cao cuộn lớn hơn 50px, ẩn khuyến mãi
+      setShowPromo(false);
+    } else if (window.scrollY < lastScrollY) {
+      // Khi cuộn lên, hiện khuyến mãi
+      setShowPromo(true);
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', controlPromoVisibility);
+
+    return () => {
+      window.removeEventListener('scroll', controlPromoVisibility);
+    };
+  }, [lastScrollY]);
   return (
     <div>
-     
+        <div
+        className={`bg-white p-1 text-center transition-transform duration-500 fixed top-0 left-0 right-0 z-50 ${
+          showPromo ? 'block' : 'hidden'
+        }`}>
+        <Carousel autoplay effect="fade" dots={false}>
+          <div>
+            <span>Miễn phí vận chuyển cho đơn trên 500k</span>
+          </div>
+          <div>
+            <span>Khuyến mãi khủng giảm tới 35% cho tất cả sản phẩm</span>
+          </div>
+          <div>
+            <span>Sale hot chào lương về - Freeship đơn từ 0đ</span>
+          </div>
+        </Carousel>
+        <hr />
+      </div>
+      
       {/* header */}
-      <nav className="flex items-center justify-between p-5 bg-background fixed w-full top-0 z-50 bg-white shadow-md  md:bg-white">
+      <nav
+        className={`flex items-center justify-between p-5 bg-background fixed w-full top-0 z-40 bg-white shadow-md transition-all duration-500 ${
+          showPromo ? 'mt-7' : 'mt-0'
+        }`}>
         <div className="text-2xl font-bold text-foreground">
           <div className="text-2xl font-bold text-foreground  ">Mode Fashion</div>
         </div>

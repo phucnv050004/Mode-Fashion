@@ -84,7 +84,7 @@ const LayoutAdmin: React.FC = () => {
             style={{
               margin: "24px 16px",
               padding: 24,
-              minHeight: 738,
+              minHeight: 848,
               background: colorBgContainer,
               borderRadius: borderRadiusLG,
             }}
